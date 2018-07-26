@@ -18,6 +18,17 @@ class Login extends CI_Controller {
         {
 
             $this->load->view('admin/index');
+		}
+		else if($this->session->userdata('previlege') == 'pegawai')
+        {
+            $NIK = $this->session->userdata('NIK');
+
+            $dataPegawai = $this->Page_Pegawai_model->dataPegawai($NIK);
+            $data = [
+                'dataPegawai' => $dataPegawai
+            ];
+
+            $this->load->view('Page_Pegawai/index', $data);
         }
         else
         {
@@ -55,10 +66,10 @@ class Login extends CI_Controller {
 			foreach ($cekPegawai->result() as $qad) 
 			{
 			
-				$session_set = array(           
-					'nama'		    => $qad->nama,                           
+				$session_set = array(                                 
 					'previlege'		=> $qad->previlege,
-					'NIK'			=> $qad->NIK
+					'NIK'			=> $qad->NIK,
+					'divisi'		=> $qad->divisi
 				);
 
 				//$data['admin'] = $this->session->userdata('ser') //: GATAU LANJUTANNYA :")

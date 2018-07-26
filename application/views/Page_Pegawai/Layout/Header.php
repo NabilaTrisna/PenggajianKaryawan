@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Penilaian Pegawai</title>
+    <link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+    <title>Halaman Pegawai</title>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">

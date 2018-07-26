@@ -3,6 +3,7 @@
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
      <title>Halaman Login</title>
  
      <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -30,7 +31,7 @@
 
              <?php echo form_open('login/login'); ?>
 
-             <h3 class="text-center title-login">Login Admin</h3>
+             <h3 class="text-center title-login"> <font face="Handvetica Neue"><br>L O G I N </h3> </font>
                  <div class="form-group">
                      <input type="text" class="form-control" name="username" placeholder="Username" required>
                  </div>

@@ -8,24 +8,59 @@
 
 <body>
 
-    
+ <div id="page-wrapper">
+<div class="container-fluid">
 
-        <div id="page-wrapper">
+<h1> <font face="Handvetica Neue"> <b> Hai 
+            <?php 
+            foreach($dataPegawai as $data)
+            {
+                echo $data->nama; 
+            }
+            ?>, <i class="fa fa-smile-o"> 
+</i></B></font> </h1>
+<br>
+<br>
 
-            <div class="container-fluid">
+<table > <font face = "Georgia" size = "3">
+    <th></th>
+    <tr> 
+     Pada sistem ini pegawai hanya bisa melihat Laporan yang meliputi : </font> <br>
+    </tr>
+    <br>
+    <tr>
+    <font face = "Georgia" size = "3">
+    1. Laporan Biodata Pegawai
+    </tr>
+    <br><br>
+    <tr>
+    2. Laporan Jam Kerja pada setiap bulannya
+    </tr>
+    <tr>
+    <br>
+    <br>
+    3. Laporan Penilaian Pegawai setiap bulannya
+    </tr>
+    <tr>
+    <br>
+    <br>
+    4. Laporan Gaji Pegawai setiap bulannya 
+    </tr>
+    <tr>
+    <br>
+    <br>
+    5. Mengunduh Laporan Gaji berdasarkan bulan dan tahun yang dipilih, dengan format <i><b> .pfd
+    </tr>
+    <br>
+<br>
+<br>
+<br>
+    </table>
 
-                <?php echo $this->session->userdata('previlege') ?>
-                <br> <br>
-                <?php echo $this->session->userdata('NIK') ?>
-                <br> <br>
+</div>
+<!-- /#page-wrapper -->
 
-
-
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
+</div>
 
     <?php $this->load->view('Page_Pegawai/Layout/Footer') ?>
 
