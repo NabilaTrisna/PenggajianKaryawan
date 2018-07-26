@@ -142,12 +142,21 @@ class Penilaian extends CI_Controller
 
     public function cariData()
     {
-        $data = [
-            'cari' => $this->Penilaian_model->cari(),
-            'nama'=> $this->Penilaian_model->nama_pegawai()
-         ];
+        if($this->session->userdata('previlege') == 'admin')
+        {
+            $data = [
+                'cari' => $this->Penilaian_model->cari(),
+                'nama'=> $this->Penilaian_model->nama_pegawai()
+             ];
+            
+            $this->load->view('penilaian/cari', $data);
+        }
+        else
+        {
+            redirect('penilaian/tambah');
+        }
+
         
-		$this->load->view('penilaian/cari', $data);
     }
 
     public function hapus($id_penilaian)

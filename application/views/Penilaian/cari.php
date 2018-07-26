@@ -8,7 +8,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Penilaian Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -43,20 +44,20 @@
   <div class="container-fluid">
 
 <!-- Start Item Show  -->
+<br>
+<legend><font face ="Georgia"> Daftar Penilaian Pegawai </legend></font>
 
-<legend> Daftar Kategori Penilaian Pegawai </legend>
     <a class="btn btn-primary" href="<?php echo base_url('penilaian/index') ?>">
             Kembali
     </a>
     <br>
-    <br>
+    <br><br>
 
   <table class="table table-striped">
 
   
     <thead>      
       <th>No</th>
-      <th>ID Penilaian</th>
       <th>Nama Pegawai</th>
       <th>Total Nilai</th>
       <th>
@@ -74,10 +75,6 @@
           </td>
           <td>
           <a href="<?php echo base_url('penilaian/show/'.$row->id_penilaian) ?>">
-              <?php echo $row->id_penilaian ?>
-            </a>
-          </td>
-          <td>
           <?php 
             foreach($nama as $NP) 
             {

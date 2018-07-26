@@ -8,7 +8,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Penilaian Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -43,8 +44,8 @@
   <div class="container-fluid">
 
 <!-- Start Item Show  -->
-
-<legend> Daftar Jam Kerja Karyawan </legend>
+<br>
+<legend><font face = "Georgia"> Daftar Jam Kerja Pegawai </legend> </font>
     <a class="btn btn-primary" href="<?php echo base_url('jamkerja/index') ?>">
             Kembali
     </a>
@@ -56,7 +57,6 @@
   
     <thead>      
       <th>No</th>
-      <th>ID Jam Kerja</th>
       <th>Nama Pegawai</th>
       <th>Total Jam Kerja / Bulan </th>
       <th>
@@ -72,12 +72,7 @@
               <?php echo $number++ ?>
             </a>
           </td>
-          <td>
-          <a href="<?php echo base_url('jamkerja/show/'.$row->id_jam) ?>">
-              <?php echo $row->id_jam ?>
-            </a>
-          </td>
-          <td>
+          <td><a href="<?php echo base_url('jamkerja/show/'.$row->id_jam) ?>">
           <?php 
             foreach($nama as $NP) 
             {

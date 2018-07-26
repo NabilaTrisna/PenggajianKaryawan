@@ -1,5 +1,5 @@
 <?php $this->load->view('layouts/base_start') ?>
-<?php $this->load->view('Pegawai/Layout/Navigation') ?>
+<?php $this->load->view('Divisi/Layout/Navigation') ?>
 <head>
 
 <meta charset="utf-8">
@@ -8,7 +8,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Data Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -48,10 +49,12 @@
 <div id="page-wrapper">
 
 <div class="container-fluid">
-<legend>Data Divisi Pegawai</legend>
+<legend><font face = "Georgia" >Data Divisi Pegawai</legend> </font>
 <a class="btn btn-primary" href="<?php echo base_url('divisi/create') ?>">
             Tambah
           </a>
+
+<br><br>
 
   <?php if (isset($results)) { ?>
   <table class="table table-striped">
@@ -60,6 +63,7 @@
       <th>ID DIVISI</th>
       <th>Nama DIVISI</th>
       <th>Gaji Pokok</th>
+      <th>Aksi</th>
     </thead>
     <tbody>
     <?php  $number = 1; foreach ($results as $data) { ?>

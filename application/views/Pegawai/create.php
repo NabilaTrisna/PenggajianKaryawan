@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Tambah Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +34,8 @@
 
 <div class="container-fluid">
 
-
-  <legend>Tambah Data Pegawai</legend>
+<br>
+  <legend><font face = "Georgia" >Tambah Data Pegawai</legend> </font><br>
   
   <?php echo form_open('pegawai/input'); ?>
 

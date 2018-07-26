@@ -93,7 +93,7 @@ class Jamkerja extends CI_Controller
         $p2 = $this->input->post('setengah_hari');
         $jjk = $p1 * 8;
         $jjs = $p2 * 4;
-        $total = $jjk - $jjs + $p3;
+        $total = $jjk + $jjs + $p3;
         $data = array(
             'id_jam' => $this->input->post('id_jam'),
             'pegawai'=>$this->input->post('namaPegawai'),
@@ -102,6 +102,7 @@ class Jamkerja extends CI_Controller
             'hari_kerja'=> $this->input->post('hari_kerja'),
             'tidak_masuk'=> $this->input->post('tidak_masuk'),
             'jam_lembur'=> $this->input->post('jam_lembur'),
+            'sakit'=> $this->input->post('sakit'),
             'setengah_hari'=> $this->input->post('setengah_hari'),
             'jumlah_jam'=> $jjk,
             'jumlah_setengah'=> $jjs,
@@ -140,12 +141,21 @@ class Jamkerja extends CI_Controller
 
     public function cariData()
     {
-        $data = [
-            'cari' => $this->Jamkerja_model->cari(),
-            'nama'=> $this->Jamkerja_model->nama_pegawai()
-         ];
-        
-		$this->load->view('jamkerja/cari', $data);
+        if($this->session->userdata('previlege') == 'admin')
+        {
+            $data = [
+                'cari' => $this->Jamkerja_model->cari(),
+                'nama'=> $this->Jamkerja_model->nama_pegawai()
+             ];
+            
+            $this->load->view('jamkerja/cari', $data);
+        }
+        else
+        {
+            redirect('jamkerja/tambah');
+        }
+
+       
     }
 
     public function hapus($id_jam)
@@ -192,6 +202,7 @@ class Jamkerja extends CI_Controller
             'hari_kerja'=> $this->input->post('hari_kerja'),
             'tidak_masuk'=> $this->input->post('tidak_masuk'),
             'jam_lembur'=> $this->input->post('jam_lembur'),
+            'sakit'=> $this->input->post('sakit'),
             'setengah_hari'=> $this->input->post('setengah_hari'),
             'jumlah_jam'=> $jjk,
             'jumlah_setengah'=> $jjs,

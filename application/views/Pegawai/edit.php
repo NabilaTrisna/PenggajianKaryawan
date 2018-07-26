@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Edit Data Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>../../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -31,8 +32,8 @@
 <div id="page-wrapper">
 
 <div class="container-fluid">
-
-  <legend>Update Data Pegawai</legend>
+<br>
+  <legend><font face = "Georgia" >Ubah Data Pegawai</legend> </font><br>
   <div class="col-xs-12 col-sm-12 col-md-12">
   <?php echo form_open_multipart('pegawai/update/'.$data->NIK); ?>
     <?php echo form_hidden('NIK', $data->NIK) ?>

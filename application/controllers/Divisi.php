@@ -22,7 +22,7 @@ class Divisi extends CI_Controller {
 
             if ($total > 0) 
             {
-                $limit = 2;
+                $limit = 10;
                 $start = $this->uri->segment(3, 0);
 
                 $config = [
@@ -81,6 +81,8 @@ class Divisi extends CI_Controller {
 
     public function store()
     {
+        if($this->session->userdata('previlege') == 'admin')
+        {
             $data = [
                 'nama' => $this->input->post('nama'),
                 'gapok'=> $this->input->post('gapok'),
@@ -105,6 +107,13 @@ class Divisi extends CI_Controller {
             } else {
                 redirect('divisi/create');
             }
+        }
+        else
+        {
+            redirect(base_url('login'));
+        }
+
+           
                 
     }
 
@@ -134,27 +143,43 @@ class Divisi extends CI_Controller {
         }
         else
         {
-            redirect('Pegawai/tambah');
+            redirect(base_url('login'));
         }
 
     }
 
     public function update($id_divisi)
     {
-       $id_divisi = $this->input->post('id_divisi');
-       $data = array( 
+        if($this->session->userdata('previlege') == 'admin')
+        {
+            $id_divisi = $this->input->post('id_divisi');
+            $data = array( 
            'nama' => $this->input->post('nama'),
            'gapok'=> $this->input->post('gapok'),
-    );
+            );
 
-       $this->Divisi_model->update($id_divisi, $data);
-       redirect('divisi');
+            $this->Divisi_model->update($id_divisi, $data);
+            redirect('divisi');
+        }
+        else
+        {
+            redirect(base_url('login'));
+        }
+      
     }
 
     public function destroy($id_divisi)
     {
-      $this->Divisi_model->delete($id_divisi);
-      redirect('divisi');
+        if($this->session->userdata('previlege') == 'admin')
+        {
+            $this->Divisi_model->delete($id_divisi);
+            redirect('divisi');
+        }
+        else
+        {
+            redirect(base_url('login'));
+        }
+      
     }
 
 

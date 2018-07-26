@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Tambah Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +36,7 @@
 <!-- Start Item Show  -->
 
 <br>
-<legend> Daftar Kategori Penilaian Pegawai </legend>
+<legend><font face = "Georgia"> Tambah Jam Kerja Pegawai </legend></font>
   <br>
 
   <?php echo form_open('jamkerja/input'); ?>
@@ -92,7 +93,8 @@
     <tr>
       <td> 1 </td>
       <td> Jumlah Hari Masuk Kerja </td>
-      <td> <input type="text" class="form-control" id="hari_kerja" name="hari_kerja" placeholder="Hari/Bulan" style = "width:130px;"></td>
+      <td> <input type="text" class="form-control" id="hari_kerja" name="hari_kerja" placeholder="Hari/Bulan" style = "width:130px;">
+            *Tidak Lebih dari 20 Hari </td>
     </tr>
     <tr>
       <td> 2 </td>
@@ -112,10 +114,16 @@
       <td> <input type="text" class="form-control" id="setengah_hari" name="setengah_hari" placeholder="Hari/Bulan" style = "width:130px;" >
       </td>
     </tr>
+    <tr>
+      <td> 5 </td>
+      <td> Jumlah Hari Sakit </td>
+      <td> <input type="text" class="form-control" id="sakit" name="sakit" placeholder="Hari/Bulan" style = "width:130px;" >
+      </td>
+    </tr>
     </thead>
     </table>
 
-    <a class="btn btn-info" href="<?php echo base_url('penilaian/') ?>">Kembali</a>
+    <a class="btn btn-info" href="<?php echo base_url('jamkerja/') ?>">Kembali</a>
     <button type="submit" class="btn btn-primary">OK</button>
 
     <?php 

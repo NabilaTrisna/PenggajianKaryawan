@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Tambah Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +36,7 @@
 <!-- Start Item Show  -->
 
 <br>
-<legend> Daftar Kategori Penilaian Pegawai </legend>
+<legend><font face ="Georgia"> Tambah Penilaian Pegawai </legend></font>
   <br>
 
   <?php echo form_open('penilaian/input'); ?>

@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Edit Jam Kerja</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <link href="<?php base_url()?>../../assets/css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,8 +26,8 @@
 <div id="page-wrapper">
 
 <div class="container-fluid">
-
-  <legend>Edit Jam Kerja Karyawan</legend>
+<br>
+  <legend><font face = "Georgia"> Ubah Jam Kerja Karyawan</legend></font><br>
   <div class="col-xs-12 col-sm-12 col-md-12">
 
   <?php echo form_open_multipart('jamkerja/update/'.$data->id_jam); ?>  
@@ -170,14 +171,21 @@
       </td>
     </tr>
     <tr>
-    <tr>
       <td> 5 </td>
+      <td> Jumlah Hari Sakit </td>
+      <td> <input type="text" class="form-control" id="sakit" name="sakit" placeholder="Hari/Bulan" style = "width:70px;" 
+            value = "<?php echo $data->sakit?>" >
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td> 6 </td>
       <td> Jumlah Jam Hari yang Masuk Kerja </td>
       <td> <input type="text" class="form-control" id="jumlah_jam" name="jumlah_jam" placeholder="Jam/Bulan" style = "width:70px;" 
             value = "<?php echo $data->jumlah_jam?>" >
       </td>
     </tr>
-      <td> 6 </td>
+      <td> 7 </td>
       <td> Jumlah Jam Hari yang Masuk Setengah Hari </td>
       <td> <input type="text" class="form-control" id="jumlah_setengah" name="jumlah_setengah" placeholder="Jam/Bulan" style = "width:70px;" 
             value = "<?php echo $data->jumlah_setengah?>">

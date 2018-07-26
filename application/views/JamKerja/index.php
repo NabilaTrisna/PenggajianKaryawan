@@ -1,5 +1,5 @@
 <?php $this->load->view('layouts/base_start') ?>
-<?php $this->load->view('Pegawai/Layout/Navigation') ?>
+<?php $this->load->view('JamKerja/Layout/Navigation') ?>
 <head>
 
 <meta charset="utf-8">
@@ -8,7 +8,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Jam Kerja Pegawai</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -43,8 +44,8 @@
   <div class="container-fluid">
 
 <!-- Start Item Show  -->
-
-<legend> Daftar Jam Kerja Pegawai </legend>
+<br>
+<legend><font face = "Georgia">Jam Kerja Pegawai </legend></font>
 <br>
     <a class="btn btn-primary" href="<?php echo base_url('jamkerja/tambah') ?>">
             Tambah
@@ -84,11 +85,12 @@
         <input class="btn btn-primary" type="submit" value="Cari">
         </td>
 			</form>
-  <br>    
 </form>
-  <br>
 </td> 
- 
+<br>
+</table>
 </body>
+<br>
+<br>
 
 <?php $this->load->view('/layouts/base_end') ?>

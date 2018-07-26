@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Show Penilaian Karyawan</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <link href="<?php base_url()?>../../assets/css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,8 +26,8 @@
 <div id="page-wrapper">
 
 <div class="container-fluid">
-
-  <legend>Show Jam Kerja Karyawan</legend>
+<br>
+  <legend><font face = "Georgia"> Detail Jam Kerja Karyawan</legend></font><br>
   <div class="col-xs-12 col-sm-12 col-md-12">
     <?php echo form_hidden('id_jam', $data->id_jam) ?>
 
@@ -146,14 +147,22 @@
       </td>
     </tr>
     <tr>
-    <tr>
       <td> 5 </td>
+      <td> Jumlah Hari Sakit </td>
+      <td> <input type="text" class="form-control" id="setengah_hari" name="setengah_hari" placeholder="Hari/Bulan" style = "width:130px;" 
+            value = "<?php echo $data->sakit; echo " Hari / Bulan "?>" readonly>
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td> 6 </td>
       <td> Jumlah Jam Hari yang Masuk Kerja </td>
       <td> <input type="text" class="form-control" id="jumlah_jam" name="jumlah_jam" placeholder="Jam/Bulan" style = "width:130px;" 
             value = "<?php echo $data->jumlah_jam; echo " Jam / Bulan "?>" readonly>
       </td>
     </tr>
-      <td> 6 </td>
+    <tr>
+      <td> 7 </td>
       <td> Jumlah Jam Hari yang Masuk Setengah Hari </td>
       <td> <input type="text" class="form-control" id="jumlah_setengah" name="jumlah_setengah" placeholder="Jam/Bulan" style = "width:130px;" 
             value = "<?php echo $data->jumlah_setengah; echo " Jam / Bulan "?>" readonly>

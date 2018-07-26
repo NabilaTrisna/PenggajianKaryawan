@@ -9,7 +9,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Tambah Divisi</title>
+<link rel="icon" type="image/png" href="<?php echo base_url('assets/gambar/icon4.png'); ?>">
+<title>Halaman Admin</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<?php base_url()?>../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -27,8 +28,8 @@
 
 <div id="page-wrapper">
 
-<div class="container-fluid">
-  <legend>Tambah Data Divisi Pegawai</legend>
+<div class="container-fluid"><br>
+  <legend><font face = "Georgia"> Tambah Data Divisi Pegawai</legend></font><br>
   <div class="col-xs-12 col-sm-12 col-md-12">
   <?php echo form_open('divisi/store'); ?>
 
